@@ -1,21 +1,31 @@
-🛠️ Esercizio di Gruppo – CRUD con JDBC
-Progetto realizzato per esercitarsi sulle operazioni CRUD (Create, Read, Update, Delete) in Java utilizzando JDBC con connessione a un database MySQL.
+# 🛠️ Esercizio di Gruppo – CRUD con JDBC
 
-👥 Membri del gruppo
-Fabio Mallardo
-Davide Latina
-Francesco Mochi
+Progetto realizzato per esercitarsi sulle operazioni **CRUD** (Create, Read, Update, Delete) in Java utilizzando JDBC con connessione a un database MySQL.
 
-📌 Descrizione
+---
+
+## 👥 Membri del gruppo
+
+- Fabio Mallardo  
+- Davide Latina  
+- Francesco Mochi  
+
+---
+
+## 📌 Descrizione
+
 L’applicazione permette di:
 
-Inserire un nuovo utente
-Visualizzare tutti gli utenti
-Aggiornare un utente esistente
-Eliminare un utente tramite ID
+- ✅ Inserire un nuovo utente  
+- 📄 Visualizzare tutti gli utenti  
+- ✏️ Aggiornare un utente esistente  
+- ❌ Eliminare un utente tramite ID  
 
-Il progetto utilizza:
-Java 17
-Maven
-MySQL
-JDBC con PreparedStatement
+---
+
+## 🧰 Tecnologie utilizzate
+
+- Java 17  
+- Maven  
+- MySQL  
+- JDBC con `PreparedStatement`
