@@ -2,7 +2,7 @@
 import java.sql.*;
 import java.util.Scanner;
 
-public class Main {
+public class AggiornaUtente {
     static final String URL = "jdbc:mysql://localhost:3306/myscheme";
     static final String USER = "root";
     static final String PASSWORD = "dmty@Z'7(=x6";
