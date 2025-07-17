@@ -2,11 +2,13 @@ import java.sql.*;
 
 public class Menu
 {
+    //static variables declaration & init
     private static final String URL = "jdbc:mysql://localhost:3306/users_crud";
     private static final String USER = "root";
     private static String password = "tiPiacerebbeSaperla";
     private static Connection dbConnection = null;
 
+    //returns the object connected to the DB
     public static Connection getDbConnection()
     {
         return dbConnection;
@@ -40,6 +42,9 @@ public class Menu
         //variables declaration & init
         int menuOption = 0;
         UserTable usrTable = new UserTable("users");
+        int userId = 0;
+        String username = "";
+        String email = "";
 
         do
         {
@@ -59,19 +64,52 @@ public class Menu
             {
                 //option 1
                 case 1:
+                    //inizializzazione variabili
+                    username = "";
+                    email = "";
+
+                    // Lettura nome
+                    username = GlobalScanner.readStringInput("Inserire il nome utente:", true);
+
+                    // Lettura email
+                    email = GlobalScanner.readStringInput("Inserire l'email:", true);
+
+                    //insert new user query
+                    usrTable.insertUtente(username, email);
+
                     break;
 
                 //option 2
                 case 2:
+                    System.out.println("Option not available");
                     break;
 
-                //option 3
+                //user update
                 case 3:
+                    //inizializzazione variabili
+                    userId = 0;
+                    username = "";
+
+                    // Lettura ID
+                    userId = GlobalScanner.readIntInput("Seleziona id dell'utente da rinominare:", true);
+                    
+                    // Lettura nuovo nome
+                    username = GlobalScanner.readStringInput("Nuovo nome utente:", true);
+
+                    // update user username query
+                    usrTable.updateUtente(userId, username);
+
                     break;
 
                 //specified user id delete
                 case 4:
-                    int userId = GlobalScanner.readIntInput("Insert the user ID to delete", true);
+                    //inizializzazione variabili
+                    userId = 0;
+
+                    //user ID input
+                    userId = GlobalScanner.readIntInput("Insert the user ID to delete", true);
+
+                    //delete user query
                     usrTable.deleteUser(userId);
                     break;
 
